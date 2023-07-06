@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- <header class="header"> -->
+        <i class='iconShowMenu bx bxs-dashboard'></i>
+
+        <nav class="header__navbar">
+            <span><a href="#home">Manuel.S</a></span>
+            
+            <ul class="header__navbar--li">
+                <li><a class="link link--active" href="#home">inicio</a></li>
+                <li><a class="link" href="#about">About</a></li>
+                <li><a class="link" href="#portfolio">Proyectos</a></li>
+                <li><a class="link" href="#contact">Contacto</a></li>
+                <li><i class='iconTheme bx bx-sun'></i></li>                 
+            </ul>
+        </nav>
+<!--  </header> -->
+    <main class="container__principal">
+        <section id="home" class="hidden">
+            <h1 class="home__title">Hola, soy <span class="home__span">Manuel Sanchez</span> Desarrollador Frontend </h1>
+            <p>[ HTML, CSS, JS, REACT ]</p>
+        </section>
+        <section id="about" class="hidden">
+            <h2>Quien soy</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptas, aliquam pariatur iusto quod non fuga provident sit dolores, sapiente aut aperiam. Dignissimos eum sequi ex quidem, veniam ipsum omnis.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consectetur recusandae eos rerum perferendis reprehenderit voluptatum consequatur soluta doloribus saepe! Quia, vero sit quo doloribus quod rem sunt non accusamus!
+            </p>
+            <div class="about__img">
+                <img src="/img/mi-foto.jpg" alt="foto personal">
+            </div>
+        </section>
+        <section id="portfolio" class="hidden">
+            <div class="portfolios">
+                <div class="portafolio">
+                    <img src="/img/foto1.jpg" alt="img-1">
+                </div>
+                <div class="portafolio">
+                    <img src="/img/foto2.jpg" alt="img-2">
+                </div>
+                <div class="portafolio">
+                    <img src="/img/foto3.jpg" alt="img-3">
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="hidden">
+            <h2>Contactame</h2>
+            <form  class="form">
+                <input class="form__input" type="text" name="nameUser" id="nameUser" placeholder="ingresa tu nombre" required>
+                <input class="form__input" type="email" name="emailUser" id="emailUser" placeholder="tu email">
+                <textarea class="form__textarea" name="comentUser" id="comentUser" cols="30" rows="10"></textarea>
+                <button class="form__button">enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="/main/index.js"></script>
+</body>
+</html>
