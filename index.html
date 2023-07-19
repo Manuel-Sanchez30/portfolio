@@ -5,62 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 <body>
     <!-- <header class="header"> -->
-        <i class='iconShowMenu bx bxs-dashboard'></i>
-
+        <i class='iconShowMenu bx bxs-dashboard boton'></i>
+        
         <nav class="header__navbar">
-            <span><a href="#home">Manuel.S</a></span>
+            <span class="header__logo"><a href="#home">Manuel.S</a></span>
             
             <ul class="header__navbar--li">
                 <li><a class="link link--active" href="#home">inicio</a></li>
                 <li><a class="link" href="#about">About</a></li>
                 <li><a class="link" href="#portfolio">Proyectos</a></li>
                 <li><a class="link" href="#contact">Contacto</a></li>
-                <li><i class='iconTheme bx bx-sun'></i></li>                 
+                <li><i class='link iconTheme bx bx-sun'></i></li>                 
             </ul>
         </nav>
 <!--  </header> -->
+    <!--  <hero>
+            <div>
+                <img src="/img/foto-hero.png" alt="mi-foto">
+            </div>
+        </hero> -->
+    
     <main class="container__principal">
-        <section id="home" class="hidden">
-            <h1 class="home__title">Hola, soy <span class="home__span">Manuel Sanchez</span> Desarrollador Frontend </h1>
-            <p>[ HTML, CSS, JS, REACT ]</p>
-        </section>
-        <section id="about" class="hidden">
-            <h2>Quien soy</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptas, aliquam pariatur iusto quod non fuga provident sit dolores, sapiente aut aperiam. Dignissimos eum sequi ex quidem, veniam ipsum omnis.</p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consectetur recusandae eos rerum perferendis reprehenderit voluptatum consequatur soluta doloribus saepe! Quia, vero sit quo doloribus quod rem sunt non accusamus!
-            </p>
-            <div class="about__img">
-                <img src="/img/mi-foto.jpg" alt="foto personal">
+        <section id="home" class="hidden ">
+            <div class="home">
+                <h1 class="home__title">Hola, soy <span class="home__span">Manuel Sanchez</span> Desarrollador Frontend </h1>
+                <p class="home__tecnologis">
+                    [   <i class='bx bxl-html5'></i>HTML,
+                        <i class='bx bxl-css3' ></i>CSS,
+                        <i class='bx bxs-file-js' ></i>JS,
+                        <i class='bx bxl-react' ></i>REACT                
+                    ]            
+                </p>
             </div>
+            
         </section>
+
+        <section id="about" class="hidden about">
+            <div class="about__mi">
+                <h2 class="about__title">Quien soy</h2>
+                <p class="about__description">Soy una persona alegre, con ganas de explorar. Me gusta trabajar en equipo y siempre estoy dispuesto a aprender nuevas habilidades y conocimientos. Siempre trato de hacer mis mejores esfuerzos en el cumplimiento de mis tareas.</p>
+            </div>
+            <div class="about__mi">
+                <h2 class="about__title">Skillset</h2>
+                <p class="about__description">habilidades en 3 campos diferentes de diseño.</p>
+            </div>  
+            <div >
+                <div class="about__skillset">
+                    <div>
+                        <i class='bx bx-code-alt'></i>
+                        <p class="skillset__title">Frameworks</p>
+                        <ul class="skillset__value">
+                            <li>React</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <i class='bx bxl-github' ></i>
+                        <p class="skillset__title">Source Control</p>
+                        <ul class="skillset__value">
+                            <li>Git/Github</li>
+                        </ul>
+                    </div>                    
+                    
+                    <div>
+                        <i class='bx bx-code' ></i>
+                        <p class="skillset__title">Languages</p>
+                        <ul class="skillset__value">
+                            <li>Html</li>
+                            <li>Css</li>
+                            <li>Javascript</li>
+                        </ul>
+                    </div>                    
+                    
+                </div>
+                
+            </div>
+                
+        </section>
+
         <section id="portfolio" class="hidden">
+            <h2 class="portfolio__title">Proyectos</h2>
             <div class="portfolios">
-                <div class="portafolio">
-                    <img src="/img/foto1.jpg" alt="img-1">
+                <div class="portfolio__card">
+                    <h3>App Clima</h3>
+                    <div class="portafolio">
+                        <img src="/img/foto1.jpg" alt="img-1">
+                    </div>
                 </div>
-                <div class="portafolio">
-                    <img src="/img/foto2.jpg" alt="img-2">
+                <div class="portfolio__card">
+                    <h3>Poke Api</h3>
+                    <div class="portafolio">
+                        <img src="/img/foto2.jpg" alt="img-2">
+                    </div>
                 </div>
-                <div class="portafolio">
-                    <img src="/img/foto3.jpg" alt="img-3">
-                </div>
+                <div class="portfolio__card">
+                    <h3>E-commerce</h3>
+                    <div class="portafolio">
+                        <img src="/img/foto3.jpg" alt="img-3">
+                    </div>
+                </div>               
             </div>
         </section>
-        <section id="contact" class="hidden">
-            <h2>Contactame</h2>
-            <form  class="form">
+        <section id="contact" class="hidden contacto">
+
+            <h2>Contactame</h2>            
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/milton-sánchez-8398a5240"       target="_blank">                        
+                        <i class='bx bxl-linkedin'></i>
+                        <i class='bx bxl-github footer__info--git' ></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- <form  class="form">
                 <input class="form__input" type="text" name="nameUser" id="nameUser" placeholder="ingresa tu nombre" required>
                 <input class="form__input" type="email" name="emailUser" id="emailUser" placeholder="tu email">
                 <textarea class="form__textarea" name="comentUser" id="comentUser" cols="30" rows="10"></textarea>
                 <button class="form__button">enviar</button>
-            </form>
+            </form> -->
         </section>
+
+        <footer class="portfolio__footer"></footer>
+
+                    <div class="footer__info">
+                        <h2 class="footer__title">
+                            <a  href="#home">Manuel.S</a>                
+                        </h2>
+                        <div>
+                            <i class='bx bxl-linkedin'></i>
+                            <i class='bx bxl-github footer__info--git' ></i>
+                        </div>
+                    </div>
+            
+                    <div>
+                        <ul class="footer__li">
+                            <li><a  href="#home">inicio</a></li>
+                            <li><a  href="#about">About</a></li>
+                            <li><a  href="#portfolio">Proyectos</a></li>
+                            <li><a  href="#contact">Contacto</a></li>
+                        </ul>        
+                    </div>
+                
+        </footer>
+
+        
     </main>
+    
     
     <script src="/main/index.js"></script>
 </body>

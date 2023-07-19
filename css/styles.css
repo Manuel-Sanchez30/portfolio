@@ -2,7 +2,8 @@
 :root {
     --negro: #393939;
     /* Tipografía */
-    --tipo-principal: Helvetica, Arial, sans-serif;
+    
+    --tipo-principal: 'Montserrat', sans-serif;
     --tipo-secundaria: Verdana;
     --z-index--: 5000;
     --z-index--menu--: 4000;
@@ -81,7 +82,7 @@ html {
   /* Desactivamos estilos por defecto de las principales etiquetas de texto */
 
 h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: inherit;
     font-style: inherit;
     text-decoration: none;
@@ -124,6 +125,11 @@ svg {
     fill: currentColor;
 }
 
+.header__logo a {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .iconTheme {
   font-size: 1.3rem;
   cursor: pointer;
@@ -132,15 +138,16 @@ svg {
 
 
 .iconShowMenu{
-  position: fixed;
+  /* position: fixed; */
   bottom: 1rem;
   right: 1rem;
   font-size: 2rem;
   cursor: pointer;
   z-index: var(--z-index--menu--);
   display: none;
-  
+    
 }
+
 
 .container__principal {
   max-width: 1024px;
@@ -150,7 +157,7 @@ svg {
 
 .header__navbar{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 50px;
   align-items: center;
   padding: 0 1rem;
@@ -168,6 +175,135 @@ svg {
   display: flex;
   gap: 1rem;
 }
+
+.bxl-html5{
+  color: orangered
+}
+.bxl-css3{
+  color: #26A7DE
+}
+.bxs-file-js{
+  color: #FFC75F
+}
+.bxl-react{
+  color: #26A7DE
+}
+
+.about__skillset{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1em;
+}
+.about__skillset p{
+  
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.about__skillset{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bx-code-alt,
+.bxl-github,
+.bx-code{
+  font-size: 2.5em;
+  color: #5221E6;
+  margin-bottom: 0.5em;    
+}
+
+.skillset__title{
+  margin-bottom: 0.5em;
+}
+
+.skillset__value{
+  color: #8491A0;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.portfolio__title{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.portfolio{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+}
+
+.portfolio__card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  border: #5221E6 solid 2px;
+  border-radius: 0.8em;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+
+
+.contacto h2{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.bxl-linkedin{
+  font-size: 2rem;
+  color: #26A7DE;
+}
+
+/* .portfolio__footer{
+  margin-top: -10em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;  
+}
+.footer__info{
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  cursor: pointer;
+
+}
+
+.footer__title{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer__li{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  font-weight: 500;
+}
+
+.footer__li a:hover{
+  color: #5221E6;
+  
+}
+
+.footer__info--git{
+  color: rgb(155, 149, 149);
+} */
+
+.portfolio__footer{
+  background-color: red;
+}
+
+.footer__title{
+  font-size: 5rem;
+}
+
 
 @media (max-width: 700px) {
 
@@ -196,12 +332,62 @@ svg {
   }
 
   .iconShowMenu{
-    display: block;  
+    position: fixed;  
     
   }
 
-}
+  .about__title{
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+  }
 
+  .img__vector{
+    width: 5px;
+  }
+  
+  .about__skillset{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1em;
+  }
+  
+  .portfolio__card{    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.3em;
+
+    justify-content: center;
+    align-items: center;
+    border: #5221E6 solid 2px;
+    border-radius: 0.8em;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .contacto{
+    margin-top: -10em;
+  }
+
+  .contacto h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .bxl-linkedin{
+    font-size: 2rem;
+    color:#26A7DE;
+    
+  }
+
+  
+
+}
 
 .link{
   padding: 0.5rem;
@@ -214,12 +400,10 @@ svg {
   color: var(--color-bg--);
 }
 
-.home__span{
-  color: lightskyblue;
-}
+
 
 section{
-  min-height: 100vh;
+  min-height: 70vh;
 
   display: flex;
   justify-content:center;
@@ -229,20 +413,56 @@ section{
   gap: 1rem;
 }
 
+.home{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
 .home__title{
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
 }
 
 .home__span {
-  font-size: 4rem;
-  color: lightseagreen;
+  font-size: 6rem;
+  color: #5221E6;
 }
-
-.about__img{
+.home__tecnologis,
+.bxl-html5,
+.bxl-css3,
+.bxs-file-js,
+.bxl-react{
+  font-size: 2rem;
+  font-weight: 600;
+  
+}
+/* .about__img{
   width: 50%;
   border-radius: 50%;
   overflow: hidden;
+} */
+
+.about__mi{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.about__title{
+  font-size: 3rem;
+}
+.about__description{
+  font-size: 1.5rem
+}
+
+.about__description{
+  line-height: 1.4;
 }
 
 .portfolios{
@@ -251,44 +471,10 @@ section{
   gap: 1rem;
 }
 
-/* .portfolio:nth-child(1){
-  transition-delay: 200ms;
-}
 
-.portfolio:nth-child(2){
-  transition-delay: 400ms;
-}
-
-.portfolio:nth-child(3){
-  transition-delay: 600ms;
-} */
-
-.form{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form__input,
-.form__textarea{
-  background-color: lightgray;
-  padding: 1em;
-  border-radius: 0.5em;
-  border: 2px solid transparent;
-
-  transition:  border 0.5s;
-}
-
-.form__button{
-  background-color:lightgreen;
-  border-radius: 0.5em;
-  padding: 1em;
-  cursor: pointer;
-}
-
-@media (min-width: 800px) { 
-  .portfolios{
-    
+@media (min-width: 800px) {
+  
+  .portfolios{    
     grid-template-columns:repeat(3, 1fr);
     grid-template-rows: 300px;
     
@@ -297,11 +483,7 @@ section{
   .portfolios img {
     height: 100%;
     width: 100%;
-  }
-
-  .form{
-    width: 80%;
-  }
+  } 
   
 }
 
