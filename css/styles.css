@@ -231,7 +231,8 @@ svg {
 
 .portfolio{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  
+  grid-template-columns: repeat(3, 1fr);
+  
 }
 
 .portfolio__card{
@@ -240,6 +241,7 @@ svg {
   justify-content: center;
   align-items: center;
   gap: 1em;
+  padding: 0.5em;
 
   border: #5221E6 solid 2px;
   border-radius: 0.8em;
@@ -248,10 +250,14 @@ svg {
 
 }
 
-
 .contacto h2{
   font-size: 2rem;
   font-weight: 700;
+}
+
+.contactame__item-value{
+  display: flex;
+  gap: 1em;
 }
 
 .bxl-linkedin{
@@ -259,51 +265,8 @@ svg {
   color: #26A7DE;
 }
 
-/* .portfolio__footer{
-  margin-top: -10em;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;  
-}
-.footer__info{
 
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  cursor: pointer;
-
-}
-
-.footer__title{
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.footer__li{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-
-  font-weight: 500;
-}
-
-.footer__li a:hover{
-  color: #5221E6;
-  
-}
-
-.footer__info--git{
-  color: rgb(155, 149, 149);
-} */
-
-.portfolio__footer{
-  background-color: red;
-}
-
-.footer__title{
-  font-size: 5rem;
-}
-
+/* inicia @media */
 
 @media (max-width: 700px) {
 
@@ -336,6 +299,18 @@ svg {
     
   }
 
+  .home__title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.home__span {
+  font-size: 0.5rem;
+  color: #5221E6;
+  
+}
+
   .about__title{
     font-size: 2rem;
     font-weight: 600;
@@ -354,6 +329,7 @@ svg {
     flex-direction: column;
     gap: 2rem;
     margin-top: 1em;
+    
   }
   
   .portfolio__card{    
@@ -384,10 +360,10 @@ svg {
     color:#26A7DE;
     
   }
-
   
-
 }
+/* termina @media 700*/
+
 
 .link{
   padding: 0.5rem;
@@ -423,12 +399,12 @@ section{
 
 .home__title{
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
 .home__span {
-  font-size: 6rem;
+  font-size: 4rem;
   color: #5221E6;
 }
 .home__tecnologis,
@@ -436,10 +412,12 @@ section{
 .bxl-css3,
 .bxs-file-js,
 .bxl-react{
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   
 }
+
+
 /* .about__img{
   width: 50%;
   border-radius: 50%;
@@ -472,20 +450,56 @@ section{
 }
 
 
+
 @media (min-width: 800px) {
   
-  .portfolios{    
-    grid-template-columns:repeat(3, 1fr);
-    grid-template-rows: 300px;
+    
+    .portfolios{    
+      grid-template-columns:repeat(3, 1fr);
+      gap: 2em;      
+    }
+
+    .portfolio__card{
+      transition-property: transform 0.8s ease;
+    }
+
+    .portfolio__card:hover{
+      transform: scale(1.1);
+    }
+
+    .portfolios img {
+      height: 100%;
+      width: 100%;
+    } 
+
+    .home__title{
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 700;
+      
+  }
+
+  .home__span {
+    font-size: 6rem;
+    color: #5221E6;
     
   }
 
-  .portfolios img {
-    height: 100%;
-    width: 100%;
-  } 
+  .home__tecnologis,
+  .bxl-html5,
+  .bxl-css3,
+  .bxs-file-js,
+  .bxl-react{
+    font-size: 2rem;
+    font-weight: 600;
+    
+  }
+
   
+
 }
+
+/* termina @media 800px */
 
 .hidden{
   opacity: 0;
@@ -498,3 +512,35 @@ section{
   opacity: 1;
   transform: translateX(0);
 }
+
+.footer{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  
+}
+
+.footer__title a{
+  font-weight: 600;
+  font-size: 1rem;
+}
+.footer__title:hover{
+  color: #5221E6; 
+}
+
+.footer__li{
+  display: flex;
+  gap: 5em;  
+}
+
+.footer__li-value{
+  margin-bottom: 1em;
+}
+
+.footer__li-value:hover{
+  color: #5221E6; 
+}
+
