@@ -176,17 +176,15 @@ svg {
   gap: 1rem;
 }
 
-.bxl-html5{
-  color: orangered
-}
-.bxl-css3{
-  color: #26A7DE
-}
+
 .bxs-file-js{
   color: #FFC75F
 }
 .bxl-react{
   color: #26A7DE
+}
+.bxl-nodejs{
+  color:#07570c
 }
 
 .about__skillset{
@@ -281,6 +279,11 @@ svg {
 .bxl-linkedin{
   font-size: 2rem;
   color: #26A7DE;
+}
+
+.bxl-gmail{
+  font-size: 2rem;
+  color: #ea4040;
 }
 
 
@@ -429,7 +432,8 @@ section{
 .bxl-html5,
 .bxl-css3,
 .bxs-file-js,
-.bxl-react{
+.bxl-react,
+.bxl-nodejs{
   font-size: 1.3rem;
   font-weight: 600;
   
@@ -507,7 +511,8 @@ section{
   .bxl-html5,
   .bxl-css3,
   .bxs-file-js,
-  .bxl-react{
+  .bxl-react,
+  .bxl-nodejs{
     font-size: 2rem;
     font-weight: 600;
     
